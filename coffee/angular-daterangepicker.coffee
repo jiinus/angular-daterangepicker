@@ -158,7 +158,7 @@ pickerModule.directive 'dateRangePicker', ($compile, $timeout, $parse, dateRange
           # https://github.com/dangrossman/daterangepicker/issues/1890
           # can fix by adding .startOf('second') but then initial value will be off by 999ms
           objValue.endDate = if x[1] then x[1].endOf('day') else null
-      return moment(objValue).toDate()
+      return moment(objValue)
 
     modelCtrl.$isEmpty = (val) ->
       # modelCtrl is empty if val is empty string

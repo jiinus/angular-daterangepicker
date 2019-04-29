@@ -162,7 +162,7 @@
               objValue.endDate = x[1] ? x[1].endOf('day') : null;
             }
           }
-          return moment(objValue).toDate();
+          return moment(objValue);
         });
         modelCtrl.$isEmpty = function(val) {
           return !(angular.isString(val) && val.length > 0);
