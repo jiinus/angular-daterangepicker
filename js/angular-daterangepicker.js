@@ -261,9 +261,9 @@
           var applicable, check;
           applicable = attrs.required && !modelCtrl.$isEmpty(viewValue);
           if (opts.singleDatePicker) {
-            check = value && value.isValid();
+            check = value && moment(value).isValid();
           } else {
-            check = value && value.startDate && value.startDate.isValid() && value.endDate && value.endDate.isValid();
+            check = value && value.startDate && moment(value.startDate).isValid() && value.endDate && moment(value.endDate).isValid();
           }
           return !applicable || !!check;
         };
